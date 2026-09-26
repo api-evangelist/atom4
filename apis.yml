@@ -1,23 +1,60 @@
 aid: atom4
+
 name: Atom4
-description: 'Atom4 is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Atom4 is a pre-IPO company listed on EquityZen, offering investors the opportunity to buy and sell shares of ATOM, a software and artificial intelligence focused firm. The platform provides detailed financials, cap table, revenue data, and business model insights. Accredited investors can access valuation, stock price, and deal offerings through EquityZen’s marketplace, which connects shareholders with a network of over 480K accredited investors.'
+
 url: https://raw.githubusercontent.com/api-evangelist/atom4/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Software
+- AI
+- DataAnalytics
+- PreIPO
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/atom4-hosts.yml
+- type: Vendors
+  url: vendors/atom4-vendors.yml
+- type: DomainSecurity
+  url: security/atom4-domain-security.yml
 - type: Website
   url: https://equityzen.com/company/atom4
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: Atom4 appears to be a cellphone repair and smart home service with no public API.
+  evidence:
+    - url: https://atom4mobiles.com
+      status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 3
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
