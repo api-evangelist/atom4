@@ -24,13 +24,11 @@ tags:
 - Software
 - Artificial Intelligence
 - Data Analytics
-- Pre-IPO
 tags_raw:
 - Company
 - Software
 - AI
 - DataAnalytics
-- PreIPO
 
 maintainers:
 - FN: Kin Lane
@@ -64,3 +62,5 @@ x-enrichment:
   artifacts_added: 3
   pass: modular-v1
   engine: identity=local,contract=local,surfaces=local,docs=local
+x-tags-removed:
+- Pre-IPO
